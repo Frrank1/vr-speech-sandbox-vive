@@ -30,7 +30,7 @@ On [IBM Bluemix](https://console.ng.bluemix.net/):
 2. Create a [Conversation](https://console.ng.bluemix.net/catalog/services/conversation/) service instance.
 3. Once you see the services in the Dashboard, select the Conversation service you created and click the !["Launch Tool"](/doc/source/images/workspace_launch.png?raw=true) button.
 4. After logging into the Conversation Tool, click the !["Import"](/doc/source/images/import_icon.png?raw=true) button.
-5. Import the [`Conversation.json`](Conversation.json) file located in your clone of this repository.
+5. Import the Conversation [`workspace.json`](data/workspace.json) file located in your clone of this repository.
 
 ## Building and Running
 
