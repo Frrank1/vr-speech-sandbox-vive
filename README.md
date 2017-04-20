@@ -10,10 +10,6 @@ Replace these IDs with real ones once we have CI enabled
 
 ## Virtual Reality Speech Sandbox
 
-In this developer journey we will create a Watson Conversation based chatbot
-that allows a user to: 1) find items to purchase using Watson Discovery, and
-2) add and remove items from their cart by updating a Cloudant NoSQL Database.
-
 In this developer journey we will create a Virtual Reality game based on Watson's [Speech-to-Text](https://www.ibm.com/watson/developercloud/speech-to-text.html) and Watson's [Conversation](https://www.ibm.com/watson/developercloud/conversation.html) services.
 
 When the reader has completed this journey, they will understand how to:
@@ -55,7 +51,7 @@ Insert Architecture pic
 ## 2. Create Bluemix services
 
 On your local machine:
-1. `git clone https://github.com/IBM/speech-sandbox.git`
+1. `git clone https://github.com/IBM/vr-speech-sandbox-vive.git`
 2. `cd speech-sandbox`
 
 In [Bluemix](https://console.ng.bluemix.net/):
