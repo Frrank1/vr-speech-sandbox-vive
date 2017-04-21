@@ -52,7 +52,7 @@ Insert Architecture pic
 
 On your local machine:
 1. `git clone https://github.com/IBM/vr-speech-sandbox-vive.git`
-2. `cd speech-sandbox`
+2. `cd vr-speech-sandbox-vive`
 
 In [Bluemix](https://console.ng.bluemix.net/):
 
