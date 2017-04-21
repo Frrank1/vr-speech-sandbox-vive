@@ -388,7 +388,11 @@ public class TutorialManager : GameManager {
         if (cameraRig.transform.position.z < -5)
         {
             //set tutorial complete
-            DataManager.dManager.tutorialComplete = true;
+            if (DataManager.dManager != null) {
+                DataManager.dManager.tutorialComplete = true;
+            } else {
+                Debug.LogWarning("No Data Manager.");
+            }
             LoadSandbox();
         }
     }
