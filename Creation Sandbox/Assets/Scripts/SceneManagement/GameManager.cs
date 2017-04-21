@@ -325,34 +325,50 @@ public class GameManager : MonoBehaviour {
     //------------------------------------------------------------------------------------------------------------------
     public virtual void LoadSandbox()
     {
-        if(!DataManager.dManager.tutorialComplete)
-        {
-            DataManager.dManager.tutorialComplete = true;
+        if (DataManager.dManager != null) {
+            if(!DataManager.dManager.tutorialComplete)
+            {
+                DataManager.dManager.tutorialComplete = true;
+            }
+            DataManager.dManager.Save();
+        } else {
+            Debug.LogWarning("No Data Manager.");
         }
-        DataManager.dManager.Save();
         SceneManager.LoadScene(2);
     }
 
     public virtual void ClearAndLoadSandbox()
     {
-        DataManager.dManager.ClearSandbox();
+        if (DataManager.dManager != null) {
+            DataManager.dManager.ClearSandbox();
+        } else {
+            Debug.LogWarning("No Data Manager.");
+        }
         SceneManager.LoadScene(2);
     }
 
     public virtual void LoadTutorial()
     {
-        if(DataManager.dManager.activeObjects != null && DataManager.dManager.activeObjects.activeObjects.Count > 0)
-        {
-            DataManager.dManager.isLoaded = true;
-        }
+        if (DataManager.dManager != null) {
+            if(DataManager.dManager.activeObjects != null && DataManager.dManager.activeObjects.activeObjects.Count > 0)
+            {
+                DataManager.dManager.isLoaded = true;
+            }
         
-        DataManager.dManager.Save();
+            DataManager.dManager.Save();
+        } else {
+            Debug.LogWarning("No Data Manager.");
+        }
         SceneManager.LoadScene(1);
     }
 
     public virtual void ClearAndLoadTutorial()
     {
-        DataManager.dManager.ClearSandbox();
+        if (DataManager.dManager != null) {
+            DataManager.dManager.ClearSandbox();
+        } else {
+            Debug.LogWarning("No Data Manager.");
+        }
         LoadTutorialWithoutSaving();
     }
 
@@ -363,7 +379,11 @@ public class GameManager : MonoBehaviour {
 
     public virtual void ExitGame()
     {
-        DataManager.dManager.Save();
+        if (DataManager.dManager != null) {
+            DataManager.dManager.Save();
+        } else {
+            Debug.LogWarning("No Data Manager.");
+        }
         Application.Quit();
     }
 
